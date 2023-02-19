@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: pink;
+    font-family: 'Poppins',sans-serif;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
+    background-image: url(bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.tab{
+    background: #000;
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+    
+}
+.tab input{
+    padding: 20px;
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    color: #fff;
+    margin: 10px;
+    font-size: 15px;
+}
+img{
+    outline: none;
+    border: 0px;    
+    height: 25px;
+    background: transparent;
+}
+button{
+    position: relative;
+    outline: none;
+    border: 0px;
+    background:transparent;
+    border-radius: 20%;
+    cursor: pointer;
+}
+label{
+    color: #555;
+    padding: 1px;
+    margin: 10px;
+    background: transparent;
+}
+.tab .txt{
+    border: 2px solid #333;
+    border-radius: 15px;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    color:#999;
+}
+.label{
+
+    position: absolute;
+    top: 47.5%;
+    left: 30%;
+    pointer-events: none;
+    cursor: text;
+    
+}
+.txt:focus{
+    border: 2px solid #777;
+}
+.txt:focus ~ .label,
+.txt:not(:placeholder-shown).txt:not(:focus) ~ .label
+{
+    top: 45%;
+    background: #000000;
+    transition: 200ms, left 200ms,font-size 200ms;
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 303px){
+    .tab .txt{
+        padding: 0;
+    }
+    .label{
+        top:47.25%;
+    }
+}
